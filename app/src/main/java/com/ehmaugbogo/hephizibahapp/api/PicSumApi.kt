@@ -18,9 +18,9 @@ import retrofit2.http.Query
 interface PicSumApi {
 
     @GET("list")
-    suspend fun getPhotos(): List<Photo>
+    suspend fun getAllPhotos(): List<Photo>
 
     @GET("list")
-    suspend fun getPhotos(@Query("page") page: Int, @Query("limit") limit: Int = 10): List<Photo>
+    suspend fun getPhotosWithLimit(@Query("page") page: Int, @Query("limit") limit: Int = 10): List<Photo>
 
 }
